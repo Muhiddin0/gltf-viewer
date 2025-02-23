@@ -29,3 +29,4 @@ npx create-next-app@latest seezntv --example "https://github.com/Muhiddin0/jst-n
 ```bash
 npx create-next-app@latest jst-nextjs --example "git@github.com:Muhiddin0/jst-nextjs/"
 ```
+"# gltf-viewer" 
