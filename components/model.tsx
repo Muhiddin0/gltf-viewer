@@ -5,9 +5,10 @@ import { Group } from "three";
 
 interface ModelProps {
   url: string;
+  scale?: number;
 }
 
-export function Model({ url }: ModelProps) {
+export function Model({ url, scale = 1 }: ModelProps) {
   const modelRef = useRef<Group>(null);
   const { scene, animations } = useGLTF(url);
   const { actions } = useAnimations(animations, modelRef);
@@ -41,7 +42,7 @@ export function Model({ url }: ModelProps) {
     <primitive
       ref={modelRef}
       object={scene}
-      scale={1}
+      scale={scale}
       onPointerDown={handlePointerDown} // Bosganda to‘xtaydi
     />
   );

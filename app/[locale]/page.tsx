@@ -10,6 +10,7 @@ export default function Home() {
   const pathname = usePathname();
 
   const url = params.get("url");
+  const scale = params.get("scale");
 
   if (url)
     return (
@@ -17,7 +18,7 @@ export default function Home() {
         <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[5, 5, 5]} intensity={1} />
-          <Model url="https://f003.backblazeb2.com/file/bucket-kt-01/monk/scene.gltf" />{" "}
+          <Model url={url} scale={scale ? Number(scale) : 1} />{" "}
           <OrbitControls />
         </Canvas>
       </div>
