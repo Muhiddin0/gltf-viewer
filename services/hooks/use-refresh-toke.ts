@@ -1,7 +1,7 @@
 "use client";
 
 import { useSession } from "next-auth/react";
-import { RefreshAccessToken } from "../requests/auth";
+import { RefreshAccessToken } from "../requests/auth.js";
 
 export const useRefreshToken = (token: any) => {
   const { data: session } = useSession();
