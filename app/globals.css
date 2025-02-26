@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* set transparent background */
+html,
+body {
+  background-color: transparent !important;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
-  @apply max-w-6xl px-4 sm:px-6 lg:px-8 mx-auto;
+  @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
 }
 
 @layer utilities {
@@ -87,8 +93,6 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-
 
 @layer base {
   * {
