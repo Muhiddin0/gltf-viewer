@@ -20,7 +20,11 @@ export default function Home() {
       <div className="flex h-full min-h-screen w-full items-center justify-center">
         {model.endsWith(".gltf") ? (
           <Canvas
-            style={{ backgroundColor: "transparent !important" }}
+            style={{
+              width: "100vw",
+              height: "100vh",
+              backgroundColor: "transparent !important",
+            }}
             camera={{ position: [0, 2, 5], fov: 50 }}
           >
             <ambientLight intensity={0.5} />
