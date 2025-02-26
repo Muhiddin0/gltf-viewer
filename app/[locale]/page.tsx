@@ -17,9 +17,12 @@ export default function Home() {
 
   if (model)
     return (
-      <div className="h-full w-full">
+      <div className="flex h-full min-h-screen w-full items-center justify-center">
         {model.endsWith(".gltf") ? (
-          <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
+          <Canvas
+            style={{ backgroundColor: "transparent !important" }}
+            camera={{ position: [0, 2, 5], fov: 50 }}
+          >
             <ambientLight intensity={0.5} />
             <directionalLight position={[5, 5, 5]} intensity={1} />
             <Model url={model} scale={scale ? Number(scale) : 1} />{" "}
