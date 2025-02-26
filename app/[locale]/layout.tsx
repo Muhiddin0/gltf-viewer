@@ -41,15 +41,13 @@ export default async function RootLayout({
       >
         <AuthProvider>
           <NextIntlClientProvider messages={messages}>
-            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              <ReactQueryProvider>
-                {children}
-                <ScreenQueryInfo
-                  size="lg"
-                  position={{ x: "left", y: "bottom" }}
-                />
-              </ReactQueryProvider>
-            </ThemeProvider>
+            <ReactQueryProvider>
+              {children}
+              <ScreenQueryInfo
+                size="lg"
+                position={{ x: "left", y: "bottom" }}
+              />
+            </ReactQueryProvider>
           </NextIntlClientProvider>
         </AuthProvider>
       </body>
